@@ -48,25 +48,21 @@ const educationData = [
                 qualification: "Web And Mobile App Development",
                 year: '2023-2024'
             },
-            {
-                university: "Pakistan Freelance Training Program",
-                qualification: "Frontend Development",
-                year: '2023'
-            },
+            
         ]
     },
     {
         title: "Experience",
         data: [
             {
-                company: "Artech Fusion",
-                role: "Discord Sales Lead",
-                year: '2023-2024'
+                company: "TechNet Cloud",
+                role: "Full Stack Developer Intern",
+                year: '2024-2025'
             },
             {
-                company: "Creative Hub",
-                role: "Discord Sales Executive",
-                year: '2021-2022'
+                company: "Devsinz",
+                role: "MERN Stack Intern",
+                year: '2024'
             },
 
         ]

@@ -1,6 +1,5 @@
 "use client"
 import { Form } from '@/components/Form';
-import TypingEffect from '@/components/TyingEffect';
 import { MailIcon, PhoneIcon, HomeIcon } from 'lucide-react';
 import React from 'react'
 

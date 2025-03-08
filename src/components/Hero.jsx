@@ -23,7 +23,7 @@ export const Hero = () => {
           <div className="flex max-w-[600px] flex-col justify-center mx-auto xl:mx-0 text-center xl:text-left">
             <div className="text-sm uppercase font-semibold mb-4 text-primary tracking-[4px]">Full Stack Developer</div>
             <TypingEffect />
-            <p className="subtitle max-w-[600px] mx-auto xl:mx-0">As a Full Stack Developer, I specialize in React, Next.js, Node.js, Express, MongoDB, Material-UI, and Tailwind CSS. Currently, I am expanding my knowledge in relational databases and gearing up for the AWS Services Associate Program.</p>
+            <p className="subtitle max-w-[600px] mx-auto xl:mx-0">As a Full Stack Developer, I specialize in React, Next.js, Node.js, Express, MongoDB, Postgresql Material-UI, and Tailwind CSS. Currently, I am expanding my knowledge in Cloud Engineering and AWS Services and gearing up for AWS Developer Associate Associate Program.</p>
             <div className="flex flex-col gap-y-3 md:flex-row gap-x-3 mx-auto xl:mx-0 mb-12 justify-center xl:justify-start">
               <Link href='/contacts'>
                 <Button className='gap-x-2'>Contact Me <Send size={18} /></Button>

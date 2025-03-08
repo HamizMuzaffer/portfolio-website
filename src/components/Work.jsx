@@ -10,9 +10,16 @@ import "swiper/css/pagination";
 
 import { Pagination } from "swiper/modules";
 import ProjectCard from "./ProjectCard";
-import { Description } from "@radix-ui/react-dialog";
 
 const projectData = [
+  {
+    image: '/work/fh.png',
+    category: "Full Stack",
+    link: "https://fh-frontend-steel.vercel.app/",
+    name: "F&H Internationals",
+    description: 'Serving customers through parcels delivery all over Pakistan and abroad',
+    github: 'https://github.com/HamizMuzaffer/nextjs-full-stack.git'
+  },
   {
     image: "/work/msytry.jpg",
     category: "Full Stack",

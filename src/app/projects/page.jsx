@@ -1,10 +1,19 @@
 "use client"
-import { Tabs, TabsList, TabsContent, TabsTrigger } from "@/components/ui/tabs"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import React, { useState } from "react"
 import ProjectCard from "@/components/ProjectCard"
 
 const projectData = [
+  
+    {
+      image: '/work/fh.png',
+      category: "Full Stack",
+      link: "https://fh-frontend-steel.vercel.app/",
+      name: "F&H Internationals",
+      description: 'Serving customers through parcels delivery all over Pakistan and abroad',
+      github: 'https://github.com/HamizMuzaffer/nextjs-full-stack.git'
+    },
+  
   {
     image: '/work/msytry.jpg',
     category: "Full Stack",
@@ -72,14 +81,6 @@ const projectData = [
     github: 'https://github.com/HamizMuzaffer/CodeWeb.git'
   },
   {
-    image: '/work/prostack.png',
-    category: "JavaScript",
-    link: "https://hamizmuzaffer.github.io/ProStack-WebApp/",
-    name: "Prostack Web",
-    description: 'Tech Blogs and query solution website made using Firebase',
-    github: 'https://github.com/HamizMuzaffer/ProStack-WebApp.git'
-  },
-  {
     image: '/work/react-todo.png',
     category: "React Js",
     link: "https://todo-chi-mauve.vercel.app/",
@@ -104,30 +105,6 @@ const projectData = [
     github: 'https://ecommerce-react-dusky.vercel.app/'
   },
 
-  {
-    image: '/work/Vervestyle.png',
-    category: "HTML,CSS",
-    link: "https://hamizmuzaffer.github.io/ClothingStore-Vervestyle/",
-    name: "VerveStyle Clothing",
-    description: 'A Basic UI for a clothing website built using CSS',
-    github: 'https://github.com/HamizMuzaffer/ClothingStore-Vervestyle'
-  },
-  {
-    image: '/work/wordwise.png',
-    category: "HTML,CSS",
-    link: "https://hamizmuzaffer.github.io/WordWise/",
-    name: "WordWise",
-    description: 'A Landing page UI for a online book reading platform',
-    github: 'https://github.com/HamizMuzaffer/WordWise.git'
-  },
-  {
-    image: '/work/pepsi.png',
-    category: "HTML,CSS",
-    link: "https://hamizmuzaffer.github.io/Pepsi-Clone/",
-    name: "Pepsi Website Clone",
-    description: 'A UI clone for pepsi website build using HTML and CSS',
-    github: 'https://github.com/HamizMuzaffer/Pepsi-Clone.git'
-  },
   {
     image: '/work/rejouice.png',
     category: "HTML,CSS",
@@ -167,14 +144,6 @@ const projectData = [
     name: "Calculator",
     description: 'A JavaScript calculator with all arithmetic operations enabled',
     github: 'https://hamizmuzaffer.github.io/Calculator-App/'
-  },
-  {
-    image: '/work/umair.png',
-    category: "HTML,CSS",
-    link: "https://umairbashir-henna.vercel.app/",
-    name: "Portfolio Site",
-    description: 'A video editing portfolio site built using HTML,CSS',
-    github: 'https://github.com/HamizMuzaffer/UmairWebsite.git'
   },
   
 
