@@ -17,7 +17,7 @@ const BlogPost = () => {
   useEffect(() => {
     const fetchComments = async () => {
       try {
-        const res = await fetch(`https://www.hamizmuzaffer.me/api/comment?blogId=${pid}`);
+        const res = await fetch(`/api/comment?blogId=${pid}`);
         const data = await res.json();
         setComments(data);
       } catch (err) {
@@ -26,7 +26,7 @@ const BlogPost = () => {
     };
 
     if (pid) fetchComments();
-  }, [pid]); // ✅ Do NOT include setComments
+  }, [pid,setComments]); // ✅ Do NOT include setComments
 
   if (!blog) {
     return (
