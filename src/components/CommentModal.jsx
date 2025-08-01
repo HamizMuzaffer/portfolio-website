@@ -24,7 +24,7 @@ export const CommentModal =   () =>  {
   const handleSubmit = async () => {
     setLoading(true);
     try {
-      const res = await fetch('/api/comments', {
+      const res = await fetch('/api/comment', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(...form,),
