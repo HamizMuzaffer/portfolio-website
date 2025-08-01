@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import { Toaster } from "@/components/ui/sonner";
 const outfit = Outfit({ subsets: ["latin"] });
 
 export const metadata = {
@@ -16,6 +17,7 @@ export default function RootLayout({ children }) {
       <meta name="color-scheme" content="light dark"/>
       <body className={outfit.className}>
         <ThemeProvider attribute="class" defaultTheme = 'light'>
+          <Toaster />
           <Header />
           {children}
           <Footer />

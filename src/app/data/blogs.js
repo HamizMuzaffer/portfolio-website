@@ -54,4 +54,47 @@ In conclusion, AWS IAM is a crucial tool for organizations looking to scale thei
   },
 
   // Add more blogs as needed
+
+ {
+    id: '3',
+    title: 'How is Redis so fast as compare to other databases?',
+    content: `When it comes to performance and speed, Redis is often considered one of the fastest data storage systems out there. Whether you're dealing with real-time analytics, caching, or session storage, Redis performs like a champion — but why exactly is it so fast?
+
+Let's break it down.
+
+   Unlike traditional databases (like MySQL, PostgreSQL, or MongoDB) that store data on disk (HDD/SSD), Redis stores everything in RAM. Accessing data from memory is orders of magnitude faster than reading from disk.
+
+• RAM access time ≈ nanoseconds to microseconds
+
+• Disk access time ≈ milliseconds
+
+Redis isn’t just storing strings. It provides highly optimized data structures such as:
+
+• Strings
+
+• Lists
+
+• Sorted Sets
+
+• Bitmaps
+
+
+These structures are implemented with performance in mind — so instead of writing complex queries or doing heavy joins, you can get exactly what you need in constant or logarithmic time.`,
+    image: "/blogs/redis.png",
+    category: "Development",
+    date : "1st August 2025"
+  },
+
+
+
+
+
+
+
+
 ];
+
+
+
+
+

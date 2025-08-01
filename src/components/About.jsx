@@ -55,6 +55,11 @@ const educationData = [
         title: "Experience",
         data: [
             {
+                company: "Hexsoltech",
+                role: "Full Stack Developer",
+                year: '2025-Present'
+            },
+            {
                 company: "TechNet Cloud",
                 role: "Full Stack Developer Intern",
                 year: '2024-2025'
