@@ -1,13 +1,32 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
 import { blogs } from "../../data/blogs";
 import Image from "next/image";
 import { FaCalendar, FaUser } from "react-icons/fa";
 import { CommentModal } from "@/components/CommentModal";
+import { useCommentStore } from "@/lib/useCommentStore";
 const BlogPost = () => {
   const { pid } = useParams();
   const blog = blogs.find((blog) => blog.id === pid);
+
+  const comments = useCommentStore((state) => state.comments);
+  const setComments = useCommentStore((state) => state.setComments);
+
+  useEffect(() => {
+    const fetchComments = async () => {
+      try {
+        const res = await fetch(`/api/comment?blogId=${pid}`);
+        const data = await res.json();
+        setComments(data);
+      } catch (err) {
+        console.error(err);
+      }
+    };
+
+    if (pid) fetchComments();
+  }, [pid]); // ✅ Do NOT include setComments
 
   if (!blog) {
     return (
@@ -68,6 +87,18 @@ const BlogPost = () => {
       <div className="my-4 flex items-center justify-center">
         <CommentModal />
       </div>
+      <div className="flex flex-col w-full space-y-3">
+        {comments.map((comment) => (
+          <div key={comment.id} className="border p-3 rounded shadow-sm">
+            <p className="font-semibold">{comment.name}</p>
+            <p className="text-sm text-gray-500">{comment.email}</p>
+            <p className="mt-2">{comment.message}</p>
+            <p className="text-xs text-gray-400 mt-1">
+              {new Date(comment.createdAt).toLocaleString()}
+            </p>
+          </div>
+        ))}
+      </div>
       <div className="mt-8 flex justify-between items-center">
         <div className="flex items-center">
           <div className="w-16 h-16 rounded-full overflow-hidden mr-4">
@@ -79,6 +110,7 @@ const BlogPost = () => {
               className="object-cover w-full h-full"
             />
           </div>
+
           <div>
             <h3 className="font-bold">Hamiz Muzaffer</h3>
             <p className="text-sm text-gray-600">Full Stack Developer</p>
